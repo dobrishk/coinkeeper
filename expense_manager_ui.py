@@ -10,18 +10,14 @@ from PyQt6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QListWidget, QPushButton, QLineEdit
 )
-from PyQt6.QtCore import Qt
 
 def setup_ui(self):
-    # Настройка окна
     self.setWindowTitle("Менеджер расходов")
     self.setFixedSize(400, 500)
 
-    # Основной виджет
     self.central_widget = QWidget()
     self.setCentralWidget(self.central_widget)
 
-    # Левый список и правые кнопки
     self.list_widget = QListWidget()
     self.list_widget.setSelectionMode(QListWidget.SelectionMode.MultiSelection)
     self.list_widget.setStyleSheet("""
@@ -55,7 +51,6 @@ def setup_ui(self):
     self.search_input = QLineEdit()
     self.search_input.setPlaceholderText("Поиск...")
 
-    # Вертикальный компоновщик для кнопок
     button_layout = QVBoxLayout()
     button_layout.addWidget(self.search_input)
     button_layout.addWidget(self.add_category_button)
@@ -71,10 +66,8 @@ def setup_ui(self):
     button_layout.addWidget(self.reset_button)
     button_layout.addStretch()
 
-    # Горизонтальный компоновщик для списка и кнопок
     main_layout = QHBoxLayout()
     main_layout.addWidget(self.list_widget)
     main_layout.addLayout(button_layout)
 
-    # Установка основного компоновщика
     self.central_widget.setLayout(main_layout)
