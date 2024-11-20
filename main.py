@@ -344,7 +344,7 @@ class ExpenseManager(QMainWindow):
 
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = ExpenseManager()
-    window.show()
-    sys.exit(app.exec())
+    ap = QApplication(sys.argv)
+    wd = ExpenseManager()
+    wd.show()
+    sys.exit(ap.exec())
