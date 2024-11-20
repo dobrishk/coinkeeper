@@ -16,3 +16,6 @@
 - Установленная библиотека PyQt6.
 ## Установка зависимостей:
 - pip install PyQt6
+
+# lisenced by yandex_lyceum(2024)
+Для работы проект создаст файл expenses.json
