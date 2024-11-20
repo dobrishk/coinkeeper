@@ -47,7 +47,6 @@ def setup_ui(self):
     self.sort_button = QPushButton("Отсортировать")
     self.reset_button = QPushButton("Сброс")
 
-    # Поле поиска
     self.search_input = QLineEdit()
     self.search_input.setPlaceholderText("Поиск...")
 
